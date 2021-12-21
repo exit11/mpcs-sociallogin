@@ -1,0 +1,40 @@
+{
+    "name": "exit11/social-login",
+    "description": "mpcs core : social login extention",
+    "type": "library",
+    "authors": [
+        {
+            "name": "HWAJUN LEE",
+            "email": "ezrock@naver.com"
+        }
+    ],
+    "require": {
+        "mpcs-ui/bootstrap5": "~0.1.0|dev-master",
+        "mpcs/core": "~0.1.0|dev-master",
+        "laravel/socialite": "^5.2",
+        "socialiteproviders/google": "^4.1",
+        "socialiteproviders/kakao": "^4.2",
+        "socialiteproviders/naver": "^4.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Exit11\\SocialLogin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Exit11\\SocialLogin\\SocialLoginServiceProvider",
+                "Exit11\\SocialLogin\\SocialLoginAuthServiceProvider",
+                "Exit11\\SocialLogin\\SocialLoginEventServiceProvider",
+                "Exit11\\SocialLogin\\SocialLoginBroadcastServiceProvider"
+            ],
+            "aliases": {
+                "SocialLogin": "Exit11\\SocialLogin\\Facades\\SocialLogin"
+            }
+        }
+    }
+}
