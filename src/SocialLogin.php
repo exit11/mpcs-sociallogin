@@ -5,6 +5,11 @@ namespace Exit11\SocialLogin;
 class SocialLogin
 {
 
+    public static function useEnable()
+    {
+        return config('mpcsociallogin.use_enable');
+    }
+
     /**
      * menuTitle
      *
